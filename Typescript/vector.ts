@@ -28,4 +28,7 @@ export class Vector{
         newVector.elements = this.elements.map(elem => elem * n)
         return newVector 
     }
+    getElements():number[]{
+        return this.elements
+    }
 }
