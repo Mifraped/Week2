@@ -18,17 +18,17 @@ export class Library{
     public setManager(newManager:string):void{
         this.manager = newManager
     }
-    toString():string{
+    public toString():string{
         let lista:string = ""
         for(let i = 0; i < this.books.length; i++){
             lista += "Book" + [i+1] + "\n" + this.books[i].toString() + "\n"
         }
         return lista
     }
-    getNumberOfBooks():number{
+    public getNumberOfBooks():number{
         return this.books.length
     }
-    findByAuthor(autor:string):Book[]{
+    public findByAuthor(autor:string):Book[]{
         return this.books.filter(elem => elem.getAuthor()===autor)
     }
 }
